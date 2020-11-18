@@ -1,16 +1,10 @@
-# test_fetching_users
+# Infinite user list
 
-A new Flutter project.
+This demo project contains of:
+1. 2 user list's screen's. First is overview screen and the second one is detailed page.
+2. Business Logic that will fetch and add new user's to list.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies
+This project is based on: 
+* **GetX** package which is responsible for Routing, State management and DI.
+* All data fetched via base **http** package
