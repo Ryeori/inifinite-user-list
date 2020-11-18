@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_fetching_users/controllers/users_Controller.dart';
+import 'package:test_fetching_users/utils/textStyles.dart';
 
 class UserListHorizontal extends GetWidget {
   //Эеземпляр контроллера
@@ -61,7 +62,7 @@ class UserListHorizontal extends GetWidget {
                                           '${usersController.usersList[index].name.first.toString()}'
                                           ' '
                                           '${usersController.usersList[index].name.last.toString()}',
-                                          style: TextStyle(fontSize: 20),
+                                          style: detailedField,
                                         ),
                                       ),
                                       Padding(
@@ -71,26 +72,23 @@ class UserListHorizontal extends GetWidget {
                                           'Date of birth: '
                                           '${usersController.usersList[index].dob.date.toString()}'
                                           ' (${usersController.usersList[index].dob.age.toString()} years)',
-                                          style: TextStyle(fontSize: 20),
+                                          style: detailedField,
                                         ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         //Адрес
                                         child: Text(
-                                          'Address: '
-                                                  '${usersController.usersList[index].location.postcode}'
-                                                  ' '
-                                                  '${usersController.usersList[index].location.city}'
-                                                  ', '
-                                                  '${usersController.usersList[index].location.street.number}'
-                                                  ' '
-                                                  '${usersController.usersList[index].location.street.name}'
-                                              .toString(),
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w300,
-                                              fontSize: 20),
-                                        ),
+                                            'Address: '
+                                                    '${usersController.usersList[index].location.postcode}'
+                                                    ' '
+                                                    '${usersController.usersList[index].location.city}'
+                                                    ', '
+                                                    '${usersController.usersList[index].location.street.number}'
+                                                    ' '
+                                                    '${usersController.usersList[index].location.street.name}'
+                                                .toString(),
+                                            style: detailedField),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -98,7 +96,7 @@ class UserListHorizontal extends GetWidget {
                                         child: Text(
                                           'Email: '
                                           '${usersController.usersList[index].email.toString()}',
-                                          style: TextStyle(fontSize: 20),
+                                          style: detailedField,
                                         ),
                                       ),
                                       Padding(
@@ -107,7 +105,7 @@ class UserListHorizontal extends GetWidget {
                                         child: Text(
                                           'Phone: '
                                           '${usersController.usersList[index].cell.toString()}',
-                                          style: TextStyle(fontSize: 20),
+                                          style: detailedField,
                                         ),
                                       ),
                                       Padding(
@@ -116,7 +114,7 @@ class UserListHorizontal extends GetWidget {
                                         child: Text(
                                           'Nationality: '
                                           '${usersController.usersList[index].nat.toString()}',
-                                          style: TextStyle(fontSize: 20),
+                                          style: detailedField,
                                         ),
                                       ),
                                     ],

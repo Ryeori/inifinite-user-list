@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_fetching_users/controllers/users_Controller.dart';
+import 'package:test_fetching_users/utils/textStyles.dart';
 
 class UserListScreen extends StatelessWidget {
   @override
@@ -53,25 +54,24 @@ class UserListScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 //Данные значения Text() виджетов являются
-                                //сцепкой текстовых данных пользователя
+                                //соединение текстовых данных пользователя
                                 Text(
-                                    '${usersController.usersList[index].name.first.toString()}'
-                                    ' '
-                                    '${usersController.usersList[index].name.last.toString()}'),
+                                  '${usersController.usersList[index].name.first.toString()}'
+                                  ' '
+                                  '${usersController.usersList[index].name.last.toString()}',
+                                  style: mainTextStyle,
+                                ),
 
                                 Text(
-                                  '${usersController.usersList[index].location.postcode}'
-                                          ' '
-                                          '${usersController.usersList[index].location.city}'
-                                          ', '
-                                          '${usersController.usersList[index].location.street.number}'
-                                          ' '
-                                          '${usersController.usersList[index].location.street.name}'
-                                      .toString(),
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      color: Colors.grey[400]),
-                                )
+                                    '${usersController.usersList[index].location.postcode}'
+                                            ' '
+                                            '${usersController.usersList[index].location.city}'
+                                            ', '
+                                            '${usersController.usersList[index].location.street.number}'
+                                            ' '
+                                            '${usersController.usersList[index].location.street.name}'
+                                        .toString(),
+                                    style: secondaryTextStyle)
                               ],
                             ),
                           ),

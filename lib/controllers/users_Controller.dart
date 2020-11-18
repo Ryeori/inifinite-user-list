@@ -54,14 +54,14 @@ class UsersController extends GetxController {
           ),
         ),
         showProgressIndicator: true,
-        duration: Duration(seconds: 1),
-        animationDuration: Duration(milliseconds: 500));
+        duration: Duration(milliseconds: 750),
+        animationDuration: Duration(milliseconds: 400));
   }
 
 //Сообщение об ошибке во время загрузки
   void loadingError() {
     if (!Get.isSnackbarOpen) {
-      Get.snackbar('Loading error', 'Data was not fetched',
+      Get.snackbar('Loading error', 'Data wasnt fetched',
           margin: EdgeInsets.fromLTRB(5, 0, 5, 20),
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.red[300],
