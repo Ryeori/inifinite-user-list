@@ -7,6 +7,7 @@ class UserListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Создаем экземпляр контроллера
+    //Instantiates a controller
     UsersController usersController = Get.put(UsersController());
     return Scaffold(
       appBar: AppBar(
@@ -22,6 +23,7 @@ class UserListScreen extends StatelessWidget {
       body: Center(
         //GetBuilder позволяет перестраивать виджеты в зависимости от изменений
         // определенного контроллера,который подключен к билдеру.
+        //GetBuilder allows to rebuild widgets based on Controller internal changes
         child: GetBuilder<UsersController>(
           builder: (_) {
             return ListView.builder(
@@ -55,6 +57,7 @@ class UserListScreen extends StatelessWidget {
                               children: [
                                 //Данные значения Text() виджетов являются
                                 //соединение текстовых данных пользователя
+                                //Text() data is a concatination of user's fields
                                 Text(
                                   '${usersController.usersList[index].name.first.toString()}'
                                   ' '

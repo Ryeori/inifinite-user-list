@@ -5,6 +5,8 @@ import 'package:test_fetching_users/utils/textStyles.dart';
 
 class UserListHorizontal extends GetWidget {
   //Эеземпляр контроллера
+  //Instantiates a controller
+
   final UsersController usersController = Get.put(UsersController());
 
   Widget build(BuildContext context) {
@@ -15,6 +17,7 @@ class UserListHorizontal extends GetWidget {
       body: Center(
         //GetBuilder перестраивает виджеты после изменений в
         //контроллере UserController
+        //GetBuilder rebuilds widget after changes in UserController instance
         child: GetBuilder<UsersController>(
           builder: (_) {
             return PageView.builder(
@@ -47,6 +50,7 @@ class UserListHorizontal extends GetWidget {
                               ),
 
                               //Текстовые поля пользователя такие, как: Имя, телефон, адрес итд
+                              //Hardcoded text fields such as: name, phone, address etc
                               Expanded(
                                 flex: 3,
                                 child: Padding(
@@ -68,6 +72,7 @@ class UserListHorizontal extends GetWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         //Дата рождения
+                                        //Bod
                                         child: Text(
                                           'Date of birth: '
                                           '${usersController.usersList[index].dob.date.toString()}'
@@ -78,6 +83,7 @@ class UserListHorizontal extends GetWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         //Адрес
+                                        //Address
                                         child: Text(
                                             'Address: '
                                                     '${usersController.usersList[index].location.postcode}'
@@ -93,6 +99,7 @@ class UserListHorizontal extends GetWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         //Эл.почта
+                                        //Email
                                         child: Text(
                                           'Email: '
                                           '${usersController.usersList[index].email.toString()}',
@@ -102,6 +109,7 @@ class UserListHorizontal extends GetWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         //Телефон
+                                        //Phone
                                         child: Text(
                                           'Phone: '
                                           '${usersController.usersList[index].cell.toString()}',
@@ -111,6 +119,7 @@ class UserListHorizontal extends GetWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         //Национальность
+                                        //Nationality
                                         child: Text(
                                           'Nationality: '
                                           '${usersController.usersList[index].nat.toString()}',
